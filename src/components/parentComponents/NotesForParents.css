@@ -1,0 +1,42 @@
+.deleteNoteButton {
+  float: right;
+  margin-top: 10px;
+  border-radius: 3px;
+  outline: none;
+  color: #4e4e4e;
+  border: 1px solid #4e4e4e;
+  background-color: #2f2f2f;
+  cursor: pointer;
+}
+
+.deleteNoteButton:hover {
+  color: #2f2f2f;
+  border: 1px solid #2f2f2f;
+  background-color: #ffffff;
+}
+
+.editableNote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editableNote p {
+  width: 85%;
+}
+
+.editableNote button {
+  width: 10%;
+  border-radius: 3px;
+  outline: none;
+  color: #4e4e4e;
+  border: 1px solid #4e4e4e;
+  background-color: #2f2f2f;
+  cursor: pointer;
+}
+
+.editableNote button:hover {
+  color: #2f2f2f;
+  border: 1px solid #2f2f2f;
+  background-color: #ffffff;
+}

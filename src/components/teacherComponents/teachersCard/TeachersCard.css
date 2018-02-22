@@ -1,0 +1,26 @@
+.teachersCardMain {
+  padding: 10px;
+  flex: 1 1 80%;
+  height: 100vh;
+  background: linear-gradient(#8c64f2, #c0aaf8);
+}
+
+.ui.inverted.segment {
+  background-color: #2f2f2f !important;
+}
+.teachersCardPortfolio h1 {
+  color: #ffffff;
+  text-align: center;
+}
+.classesLoader {
+  height: 90vh;
+}
+
+.ui.tabular.menu .item {
+  flex: 1;
+  justify-content: center;
+  color: #ffffff !important;
+}
+.ui.tabular.menu .active.item {
+  color: #000000 !important;
+}

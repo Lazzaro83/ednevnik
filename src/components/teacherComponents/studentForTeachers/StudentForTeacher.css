@@ -1,0 +1,26 @@
+.ui.divided.inverted.relaxed.list.listOfStudents {
+  overflow: hidden;
+}
+.ui.divided.inverted.relaxed.list.listOfStudents .item {
+  overflow-y: auto;
+  height: 170px;
+}
+.ui.list > .item .content.listOfStudents__content {
+  height: 100%;
+}
+.ui.list > .item .header.listOfStudents_studentName {
+  margin: 0 0 20px 0;
+  color: #ffe21f !important;
+}
+
+.ui.cards.listOfStudents__cardGroup {
+  margin: 0;
+  height: 77%;
+  display: block;
+  overflow-y: auto;
+  width: max-content;
+}
+
+.ui.inverted.list .item a.studentLink:not(.ui) {
+  color: #ffe21f !important;
+}

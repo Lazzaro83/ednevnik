@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
-import TeachersLogin from "./components/TeachersLogin";
-import ParentsLogin from "./components/ParentsLogin";
-import StudentCard from "./components/StudentCard";
-import TeachersCard from "./components/TeachersCard";
-import StudentMarks from "./components/StudentMarks";
-import TeacherData from "./components/TeacherData";
-import StudentAttendance from "./components/StudentAttendance";
-import Homework from "./components/Homework";
-import GeneralNotes from "./components/GeneralNotes";
-import NotesForParents from "./components/NotesForParents";
+import TeachersLogin from "./components/teacherComponents/teachersLogIn/TeachersLogin";
+import ParentsLogin from "./components/parentComponents/parentsLogIn/ParentsLogin";
+import StudentCard from "./components/parentComponents/studentCard/StudentCard";
+import TeachersCard from "./components/teacherComponents/teachersCard/TeachersCard";
+import StudentMarks from "./components/parentComponents/StudentMarks";
+import TeacherData from "./components/parentComponents/TeacherData";
+import StudentAttendance from "./components/parentComponents/studentAttendance/StudentAttendance";
+import Homework from "./components/parentComponents/Homework";
+import GeneralNotes from "./components/teacherComponents/generalNotes/GeneralNotes";
+import NotesForParents from "./components/parentComponents/NotesForParents";
 import "./App.css";
 
 class App extends Component {
