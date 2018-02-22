@@ -11,6 +11,7 @@ class GeneralNotes extends Component {
       noteOnStudent: "",
       notes: null,
       modalOpened: false,
+        student: "",
     };
     this.giveNote = this.giveNote.bind(this);
   }
@@ -21,7 +22,7 @@ class GeneralNotes extends Component {
       state: "notes",
     });
       this.setState({
-          student: this.props,
+          student: this.props.location.student.student,
       })
 
   }
@@ -55,8 +56,6 @@ class GeneralNotes extends Component {
   }
 
   render() {
-    console.log('this.props notes studnet nesto', this.props);
-      console.log('studenti jebeni', this.state);
     return (
       <div className="teachersCardMain">
         <Modal
