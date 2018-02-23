@@ -24,3 +24,18 @@
 .ui.inverted.list .item a.studentLink:not(.ui) {
   color: #ffe21f !important;
 }
+
+.giveHomeworkButton {
+  display: block;
+  border-radius: 3px;
+  width: 100%;
+  border: 2px solid #ffe21f;
+  text-align: center;
+  padding: 10px 0;
+  color: #ffe21f;
+}
+
+.giveHomeworkButton:hover {
+  background-color: #ffe21f;
+  color: #303030;
+}

@@ -2,11 +2,7 @@ import React, { Component } from "react";
 import {
   Segment,
   List,
-  Card,
-  Button,
-  Icon,
-  Modal,
-  Form
+  Card
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import ClassDateCard from "../classDateCard/ClassDateCard.jsx";
@@ -53,53 +49,29 @@ class Student extends Component {
     this.giveHomework = this.giveHomework.bind(this);
   }
 
-  handleOpen = () => {
-    this.setState({
-      modalOpened: true
-    });
-  };
-  giveHomework() {
-    const homework = {
-      homework: this.homework.value
-    };
+  giveHomework(homework) {
+    console.log("Pozvana sam sa ", homework)
     const x = new Date();
     const homeworkDate = `${x.getDate()}-${x.getMonth() +
       1}-${x.getFullYear()}`;
-    this.props.addHomework(this.props.termin, homework.homework, homeworkDate);
-    this.setState({
-      modalOpened: false
-    });
+    this.props.addHomework(this.props.termin, homework, homeworkDate);
   }
   render() {
     return (
       <Segment inverted>
-        <Modal
-          trigger={
-            <Button inverted fluid color="yellow" onClick={this.handleOpen}>
-              Zadaj domaći
-            </Button>
-          }
-          open={this.state.modalOpened}
+        <Link
+           to={{
+              pathname: "/teacherHomework",
+              homework: {
+                giveHomework: this.giveHomework,
+                  termin: this.props.termin,
+                  teacher: this.props.teacher
+              }
+           }}
+           className="giveHomeworkButton"
         >
-          <Modal.Header>Tekst zadatka</Modal.Header>
-          <Modal.Content>
-            <Modal.Description>
-              <Form>
-                <textarea
-                  placeholder="Tekst zadatka"
-                  ref={textarea => {
-                    this.homework = textarea;
-                  }}
-                />
-              </Form>
-            </Modal.Description>
-          </Modal.Content>
-          <Modal.Actions inverted>
-            <Button inverted color="purple" onClick={this.giveHomework}>
-              Zadaj ovoj grupi <Icon name="write square" />
-            </Button>
-          </Modal.Actions>
-        </Modal>
+           Zadaj domaći
+        </Link>
         <List divided inverted relaxed className="listOfStudents">
           {Object.keys(this.props.students).map((student, index) => (
             <List.Item key={index}>

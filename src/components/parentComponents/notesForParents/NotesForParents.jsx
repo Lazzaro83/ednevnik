@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Segment, Divider, Dimmer, Loader } from "semantic-ui-react";
-import base from "../../base.js";
+import base from "../../../base.js";
 import "./NotesForParents.css";
 
 class NotesForParents extends Component {
@@ -8,10 +8,8 @@ class NotesForParents extends Component {
     super();
     this.state = {
       studentNotes: null,
-      proba: ""
     };
     this.renderStudentsNotes = this.renderStudentsNotes.bind(this);
-    this.deleteComment = this.deleteComment.bind(this);
   }
 
   componentWillMount() {
@@ -41,7 +39,6 @@ class NotesForParents extends Component {
     const studentNotes = this.state.studentNotes;
     studentNotes[`${note[0]}`] = `${this.refs[note[0]].innerText}`;
     this.setState({ studentNotes });
-    console.log(note, `${this.refs[note[0]].innerText}`);
   };
 
   renderStudentsNotes() {

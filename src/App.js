@@ -10,7 +10,8 @@ import TeacherData from "./components/parentComponents/TeacherData";
 import StudentAttendance from "./components/parentComponents/studentAttendance/StudentAttendance";
 import Homework from "./components/parentComponents/Homework";
 import GeneralNotes from "./components/teacherComponents/generalNotes/GeneralNotes";
-import NotesForParents from "./components/parentComponents/NotesForParents";
+import NotesForParents from "./components/parentComponents/notesForParents/NotesForParents";
+import TeacherHomework from "./components/teacherComponents/teacherHomework/TeacherHomework";
 import "./App.css";
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
+          <Route path="/teacherHomework" component={TeacherHomework} />
           <Route path="/notesForParents" component={NotesForParents} />
           <Route path="/marks" component={StudentMarks} />
           <Route path="/teacherData" component={TeacherData} />

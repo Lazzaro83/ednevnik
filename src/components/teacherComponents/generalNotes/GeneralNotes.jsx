@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Modal, Button, Form, Icon } from "semantic-ui-react";
-import NotesForParents from "../../parentComponents/NotesForParents.jsx";
+import NotesForParents from "../../parentComponents/notesForParents/NotesForParents.jsx";
 import base from "../../../base.js";
 import "./GeneralNotes.css";
 
@@ -29,6 +29,12 @@ class GeneralNotes extends Component {
   handleOpen = () => {
     this.setState({
       modalOpened: true
+    });
+  };
+
+  handleClose = () => {
+    this.setState({
+       modalOpened: false
     });
   };
 
@@ -71,7 +77,16 @@ class GeneralNotes extends Component {
           }
           open={this.state.modalOpened}
         >
-          <Modal.Header>Tekst beleške</Modal.Header>
+          <Modal.Header>
+              Tekst beleške
+              <Button
+                  content="X"
+                  color="grey"
+                  floated="right"
+                  size="mini"
+                  onClick={ this.handleClose }
+              />
+          </Modal.Header>
           <Modal.Content>
             <Modal.Description>
               <Form>

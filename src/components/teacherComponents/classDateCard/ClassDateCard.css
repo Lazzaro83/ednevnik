@@ -4,6 +4,8 @@
   width: 110px;
   margin: 0 5px;
   border: 1px solid #fffff0;
+  visibility: visible;
+  transition: all 500ms ease-in-out;
 }
 .listOfStudents__date {
   padding: 0 15%;
@@ -13,9 +15,8 @@
   padding: 15% 5%;
 }
 
-.ui.toggle.checkbox.radioBoxEnabled {
-  width: 100%;
-  padding: 15% 5%;
+.ui.cards.listOfStudents__cardGroup div.listOfStudents__individualCard.disabled {
+visibility: hidden;
 }
 
 .ui.toggle.checkbox .box, .ui.toggle.checkbox label {
@@ -26,7 +27,7 @@
 }
 .ui.toggle.checkbox .box, .ui.toggle.checkbox label:hover{
   color: #ffffff;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 .ratings {
   padding: 0 10%;

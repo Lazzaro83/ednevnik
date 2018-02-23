@@ -25,21 +25,14 @@ class ClassDateCard extends Component {
 
   render(){
     return(
-      <Card.Content className='listOfStudents__individualCard'>
+      <Card.Content className={this.state.checked === true ? 'listOfStudents__individualCard disabled' : 'listOfStudents__individualCard'}>
         <Card.Header className='listOfStudents__date'>
           {this.props.date}
         </Card.Header>
           <Card.Description>
-            {this.state.checked ?
+            { !this.state.checked &&
               <Radio
                   toggle
-                label='došao'
-                name='radioGroup'
-                  checked={true}
-                  disable
-              /> :
-              <Radio
-                toggle
                   label='došao'
                 name='radioGroup'
                 checked={false}

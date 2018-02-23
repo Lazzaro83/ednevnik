@@ -1,5 +1,5 @@
 .teachersLoginPanel {
-  background: linear-gradient(#8c64f2, #c0aaf8);
+  background: linear-gradient(#9b0018, #f67589);
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -29,7 +29,7 @@ input {
   display: block;
   margin: 20px 0;
   background-color: #f8f757;
-  color: #8c64f2;
+  color: #9b0018;
   text-decoration: none;
   text-align: center;
   width: 250px;
