@@ -5,7 +5,6 @@
   margin: 0 5px;
   border: 1px solid #fffff0;
   visibility: visible;
-  transition: all 500ms ease-in-out;
 }
 .listOfStudents__date {
   padding: 0 15%;
@@ -15,17 +14,20 @@
   padding: 15% 5%;
 }
 
-.ui.cards.listOfStudents__cardGroup div.listOfStudents__individualCard.disabled {
-visibility: hidden;
+.ui.cards.listOfStudents__cardGroup
+  div.listOfStudents__individualCard.disabled {
+  visibility: hidden;
 }
 
-.ui.toggle.checkbox .box, .ui.toggle.checkbox label {
+.ui.toggle.checkbox .box,
+.ui.toggle.checkbox label {
   color: #ffffff !important;
   margin-top: 5px;
   margin-bottom: 5px;
   transition: all 500ms ease-in-out;
 }
-.ui.toggle.checkbox .box, .ui.toggle.checkbox label:hover{
+.ui.toggle.checkbox .box,
+.ui.toggle.checkbox label:hover {
   color: #ffffff;
   font-size: 1.1em;
 }

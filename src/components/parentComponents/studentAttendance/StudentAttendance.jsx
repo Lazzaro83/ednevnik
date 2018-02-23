@@ -20,7 +20,7 @@ class StudentAttendance extends Component {
             {attendancesData.map(attendance => (
               <Table.Row key={attendance[0]}>
                 <Table.Cell>
-                  <Label ribbon size="big" inverted color='violet'>
+                  <Label ribbon size="big" inverted color="violet">
                     {attendance[0]}
                   </Label>
                 </Table.Cell>
@@ -28,7 +28,7 @@ class StudentAttendance extends Component {
                   {attendance[1] === true ? (
                     <Icon name="checkmark" color="green" size="big" />
                   ) : (
-                    <Icon name="remove" color="red" size="big"/>
+                    <Icon name="remove" color="red" size="big" />
                   )}
                 </Table.Cell>
               </Table.Row>

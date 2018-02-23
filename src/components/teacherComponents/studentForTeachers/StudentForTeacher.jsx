@@ -1,42 +1,38 @@
 import React, { Component } from "react";
-import {
-  Segment,
-  List,
-  Card
-} from "semantic-ui-react";
+import { Segment, List, Card } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import ClassDateCard from "../classDateCard/ClassDateCard.jsx";
 import "./StudentForTeacher.css";
 
 const classDates = [
-  "24-02-2018",
-  "25-02-2018",
+  "02-24-2018",
+  "02-25-2018",
   "03-03-2018",
-  "04-03-2018",
-  "10-03-2018",
-  "11-03-2018",
-  "17-03-2018",
-  "18-03-2018",
-  "24-03-2018",
-  "25-03-2018",
-  "31-03-2018",
-  "01-04-2018",
-  "14-04-2018",
-  "15-04-2018",
-  "21-04-2018",
-  "22-04-2018",
-  "28-04-2018",
-  "29-04-2018",
+  "03-04-2018",
+  "03-10-2018",
+  "03-11-2018",
+  "03-17-2018",
+  "03-18-2018",
+  "03-24-2018",
+  "03-25-2018",
+  "03-31-2018",
+  "04-01-2018",
+  "04-14-2018",
+  "14-15-2018",
+  "04-21-2018",
+  "04-22-2018",
+  "04-28-2018",
+  "04-29-2018",
   "05-05-2018",
-  "06-05-2018",
-  "12-05-2018",
-  "13-05-2018",
-  "19-05-2018",
-  "20-05-2018",
-  "26-05-2018",
-  "27-05-2018",
-  "03-06-2018",
-  "04-06-2018"
+  "05-06-2018",
+  "05-12-2018",
+  "05-13-2018",
+  "05-19-2018",
+  "05-20-2018",
+  "05-26-2018",
+  "05-27-2018",
+  "06-03-2018",
+  "06-04-2018"
 ];
 
 class Student extends Component {
@@ -50,7 +46,7 @@ class Student extends Component {
   }
 
   giveHomework(homework) {
-    console.log("Pozvana sam sa ", homework)
+    console.log("Pozvana sam sa ", homework);
     const x = new Date();
     const homeworkDate = `${x.getDate()}-${x.getMonth() +
       1}-${x.getFullYear()}`;
@@ -60,17 +56,17 @@ class Student extends Component {
     return (
       <Segment inverted>
         <Link
-           to={{
-              pathname: "/teacherHomework",
-              homework: {
-                giveHomework: this.giveHomework,
-                  termin: this.props.termin,
-                  teacher: this.props.teacher
-              }
-           }}
-           className="giveHomeworkButton"
+          to={{
+            pathname: "/teacherHomework",
+            homework: {
+              giveHomework: this.giveHomework,
+              termin: this.props.termin,
+              teacher: this.props.teacher
+            }
+          }}
+          className="giveHomeworkButton"
         >
-           Zadaj domaći
+          Zadaj domaći
         </Link>
         <List divided inverted relaxed className="listOfStudents">
           {Object.keys(this.props.students).map((student, index) => (
