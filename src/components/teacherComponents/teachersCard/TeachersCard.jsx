@@ -18,8 +18,7 @@ class TeachersCard extends Component {
   }
 
   componentWillMount() {
-    this.ref = base.syncState(`nastavnici/Lazar Nikolic`, {
-      // this.ref = base.syncState(`nastavnici/${this.props.userName}`, {
+    this.ref = base.syncState(`nastavnici/${this.props.userName}`, {
       context: this,
       state: "studentName"
     });
